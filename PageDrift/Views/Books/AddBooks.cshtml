@@ -1,0 +1,66 @@
+﻿@model PageDrift.Models.Books
+
+@{
+    ViewBag.Title = "AddBooks";
+}
+
+
+@using (Html.BeginForm("AddBooks", "Books", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <table class="table table-success table-striped-columns table-hover">
+        <tr>
+            <th colspan="2" style="background-color: #18c477 ">
+                <h2 style="text-align:center">AddBooks</h2>
+            </th>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(B=>B.Title)</th>
+            <td>@Html.TextBoxFor(B=>B.Title)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(B=>B.Author)</th>
+            <td>@Html.TextBoxFor(B=>B.Author)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(B=>B.Description)</th>
+            <td>@Html.TextBoxFor(B=>B.Description)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(B=>B.Publication)</th>
+            <td>@Html.TextBoxFor(B=>B.Publication)</td>
+        </tr>
+
+         <tr>
+            <th>@Html.DisplayNameFor(B=>B.PublicationYear)</th>
+            <td>@Html.TextBoxFor(B=>B.PublicationYear)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(B=>B.ISBNNo)</th>
+            <td>@Html.TextBoxFor(B=>B.ISBNNo)</td>
+        </tr>
+        <tr>
+            <th>@Html.DisplayNameFor(B=>B.Img)</th>
+            <td>
+                <input type="file" name="Img"/>
+            </td>
+        </tr>
+
+         <tr>
+            <th>@Html.DisplayNameFor(B=>B.File)</th>
+            <td><input type="file" name="file"/></td>
+        </tr>
+
+
+        <tr>
+            <th>
+               
+            </th>
+            <td>
+                <button type="submit" class="btn btn-success"> Sumbit</button>
+                <button type="reset" class="btn btn-danger"> Reset</button>
+            </td>
+        </tr>
+
+    </table>
+}
+

@@ -1,0 +1,121 @@
+﻿@model PageDrift.Models.Books
+
+@{
+    ViewBag.Title = "DisplayBook";
+}
+
+
+
+<h1 class="text-center " style="background-color:gold"> @Html.DisplayFor(B => B.Title)</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <img src="~/Uploads/@Model.Img" / width="500px" height="500px">
+        </div>
+    
+        <div class="col">
+            <table class=" table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(B => B.Title)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(B => B.Title)
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(B => B.Author)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(B => B.Author)
+                    </td>
+
+                </tr>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(B => B.Description)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(B => B.Description)
+                    </td>
+
+                </tr>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(B => B.Publication)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(B => B.Publication)
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(B => B.PublicationYear)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(B => B.PublicationYear)
+                    </td>
+
+                </tr>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(B => B.ISBNNo)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(B => B.ISBNNo)
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center">
+                        
+                            <button class="btn btn-success"> @Html.ActionLink("Read Book", "ReadBook", new {id=Model.BookId},new {@class= "text-decoration-none text-light" })</button>
+
+                        &nbsp;
+
+                        <a href="~/Uploads/@Model.File" download>
+                            <button class="btn btn-success text-decoration-none text-light"> Download Book</button>
+
+                        </a>
+                    </td>
+
+
+                </tr>
+
+
+            </table>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container mt-5">
+
+    <div class="split left">
+
+    </div>
+    <div class="split right ">
+
+
+    </div>
+</div>
+

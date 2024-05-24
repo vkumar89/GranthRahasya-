@@ -1,0 +1,116 @@
+﻿@model PageDrift.Models.User
+@{
+    ViewBag.Title = "Signup";
+}
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-body {
+            padding: 40px;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-check-label {
+            font-size: 14px;
+        }
+
+        .btn-login {
+            background-color: #6c757d;
+            border-color: #6c757d;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+            .btn-login:hover {
+                background-color: #495057;
+                border-color: #495057;
+            }
+
+        .btn-signup {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+            .btn-signup:hover {
+                background-color: #0056b3;
+                border-color: #0056b3;
+            }
+
+        .bg-image {
+            background-image: url('https://via.placeholder.com/150');
+            background-size: cover;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-4">Login</h3>
+                        @using (Html.BeginForm("Signup", "Account"))
+                        {
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                @Html.TextBoxFor(U => U.UserName, new { @class = "form-control" })
+                            </div>
+                            <div class="form-group">
+                                <label for="username">Email</label>
+                                @Html.TextBoxFor(U => U.Email, new { @class = "form-control" })
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                @Html.TextBoxFor(U => U.Password, new { @class = "form-control" })
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="terms" name="term" required>
+                                <label class="form-check-label" for="terms">I've read and agree with <a href="#">Terms of Service</a> and our <a href="#">Privacy Policy</a></label>
+                            </div>
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn btn-login btn-block">Sign Up</button>
+                                <a href="http://localhost:50999/Account/LogIn" class="btn btn-signup btn-block mt-3">Login</a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-none d-md-block">
+                <img src="~/Images/Screenshot 2024-05-23 152904.png" height="475px" width="350px" />
+            </div>
+        </div>
+    </div>
+</body>
+

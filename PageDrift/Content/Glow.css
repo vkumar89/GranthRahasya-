@@ -1,0 +1,18 @@
+﻿body {
+    .glow
+
+{
+    animation: glow-animation 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow-animation {
+    from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #ff6, 0 0 60px #ff6, 0 0 70px #ff6;
+    }
+
+    to {
+        box-shadow: 0 0 20px #fff, 0 0 30px #ff6, 0 0 40px #ff6, 0 0 50px #ff6, 0 0 60px #ff6, 0 0 70px #ff6, 0 0 80px #ff6;
+    }
+}
+
+}

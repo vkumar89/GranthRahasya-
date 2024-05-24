@@ -1,0 +1,30 @@
+﻿@model PageDrift.Models.Books
+@{
+    ViewBag.Title = "ReadBook";
+}
+
+
+<style>
+    .pdf{
+        width:100%;
+        
+    }
+    
+
+    
+</style>
+
+<body>
+    <h1 class="text-center " style="background-color:gold"> @Html.DisplayFor(B => B.Title)</h1>
+
+    <iframe class="pdf "
+            src="~/Uploads/@Model.File"
+            width="400" height="500">
+    </iframe>
+    <a href="http://localhost:50999/Books/DisplayBook/@Model.BookId">
+        <button class="btn btn-warning w-100">
+            @Html.ActionLink("Back", "DisplayBook", new { id = Model.BookId }, new { @class = "text-decoration-none text-light" })
+        </button>
+    </a>
+  
+</body>

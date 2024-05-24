@@ -1,0 +1,91 @@
+﻿@model IEnumerable<PageDrift.Models.Books>
+
+@{
+    ViewBag.Title = "Admin";
+}
+<h2>Admin Exercise</h2>
+
+<p>
+    <button class="btn btn-info link-light text-decoration-none">
+        @Html.ActionLink("Create New", "AddBooks", new { }, new { @class = "link-dark text-decoration-none fw-bold" })
+    </button>
+
+
+</p>
+<table class="table table-success table-striped table-hover text-center" align="center">
+    <tr>
+
+
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Publication)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PublicationYear)
+        </th>
+         <th>
+            @Html.DisplayNameFor(model => model.ISBNNo)
+        </th>
+         <th>
+            @Html.DisplayNameFor(model => model.Img)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.File)
+        </th>
+
+        <th>
+             Action &nbsp    Link
+        </th>
+    </tr>
+
+    @foreach (var item in Model.AsEnumerable().Reverse())
+    {
+        <tr>
+
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Publication)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PublicationYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ISBNNo)
+            </td>
+            
+
+            <td>
+                <img src="/Uploads/@item.Img" width="75px" height="75px" />
+            </td>
+            <td>
+                @Html.DisplayFor(model=>item.File)
+            </td>
+
+            <td>
+
+                <button class="btn btn-danger">
+                    @Html.ActionLink("Delete", "Delete", new { id = item.BookId }, new { onclick = "return confirm('Are you sure of deleting the record?')", @class = "link-dark text-decoration-none fw-bold" })
+                </button>
+                <button class="btn btn-warning">@Html.ActionLink("Edit", "Edit", new { id = item.BookId }, new { @class = "link-dark text-decoration-none fw-bold" })</button>
+            </td>
+        </tr>
+    }
+
+</table>
