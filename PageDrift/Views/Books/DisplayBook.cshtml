@@ -13,7 +13,7 @@
         <div class="col">
             <img src="~/Uploads/@Model.Img" / width="500px" height="500px">
         </div>
-    
+
         <div class="col">
             <table class=" table">
                 <tr>
@@ -71,17 +71,58 @@
                 </tr>
 
                 <tr>
-                    <td colspan="2" align="center">
-                        
-                            <button class="btn btn-success"> @Html.ActionLink("Read Book", "ReadBook", new {id=Model.BookId},new {@class= "text-decoration-none text-light" })</button>
+                    @if (Model.File.Contains("pdf"))
+                    {
+                        <td colspan="2" align="center">
 
-                        &nbsp;
+                            <button class="btn btn-success">
 
-                        <a href="~/Uploads/@Model.File" download>
-                            <button class="btn btn-success text-decoration-none text-light"> Download Book</button>
+                                @Html.ActionLink("Read Book", "ReadBook", new { id = Model.BookId }, new { @class = "text-decoration-none text-light" })
+                            </button>
 
-                        </a>
-                    </td>
+                            &nbsp;
+
+                            <a href="~/Uploads/@Model.File" download>
+                                <button class="btn btn-success text-decoration-none text-light"> Download Book</button>
+
+                            </a>
+                        </td>
+                    }
+                    else if (Model.File.Contains("mp4"))
+                    {
+                        <td colspan="2" align="center">
+
+                            <button class="btn btn-success">
+
+                                @Html.ActionLink("Play Video", "ReadBook", new { id = Model.BookId }, new { @class = "text-decoration-none text-light" })
+                            </button>
+
+                            &nbsp;
+
+                            <a href="~/Uploads/@Model.File" download>
+                                <button class="btn btn-success text-decoration-none text-light"> Download Video</button>
+
+                            </a>
+                        </td>
+                    }
+                    else
+                    {
+                        <td colspan="2" align="center">
+
+                            <button class="btn btn-success">
+
+                                @Html.ActionLink("Play Bhajan", "ReadBook", new { id = Model.BookId }, new { @class = "text-decoration-none text-light" })
+                            </button>
+
+                            &nbsp;
+
+                            <a href="~/Uploads/@Model.File" download>
+                                <button class="btn btn-success text-decoration-none text-light"> Download Bhajan</button>
+
+                            </a>
+                        </td>
+                    }
+
 
 
                 </tr>

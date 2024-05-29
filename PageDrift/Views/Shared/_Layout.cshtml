@@ -23,8 +23,16 @@
                         <a class="nav-link" href="http://localhost:50999/">Home <span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item active">
+                        @Html.ActionLink("Videos", "DisplayVideos", "Books", new { area = "" }, new { @class = "nav-link" })
+                    </li>
+                     <li class="nav-item active">
+                        @Html.ActionLink("Bhajan", "DisplayBhajan", "Books", new { area = "" }, new { @class = "nav-link" })
+                    </li>
+
+                     <li class="nav-item active">
                         @Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })
                     </li>
+
                     <li class="nav-item active">
                         @Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })
                     </li>

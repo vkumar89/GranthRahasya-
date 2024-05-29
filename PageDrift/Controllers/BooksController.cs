@@ -22,6 +22,23 @@ namespace PageDrift.Controllers
         }
         #endregion
 
+        #region Display Videos
+        [Authorize]
+        public ViewResult DisplayVideos()
+        {
+            return View(dc.books);
+        }
+
+        #endregion
+
+        #region Display Mp3
+        [Authorize]
+        public ViewResult DisplayBhajan()
+        {
+            return View(dc.books);
+        }
+        #endregion
+
         #region Add Books
         [Authorize(Roles ="admin")]
        

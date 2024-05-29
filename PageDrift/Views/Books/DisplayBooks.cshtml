@@ -12,10 +12,13 @@
     <body>
         <div class="container mt-5">
             <div class="row">
-
+               
                 @foreach (var book in Model)
                 {
-                    
+                    if (book.File.Contains("pdf"))
+                    {
+
+
                         <div class="col-md-4">
                             <a href="http://localhost:50999/Books/DisplayBook/@book.BookId">
                                 <div class="card border-0">
@@ -29,7 +32,9 @@
                                 </div>
                             </a>
                         </div>
-                    
+                    }
+
+
                 }
 
             </div>

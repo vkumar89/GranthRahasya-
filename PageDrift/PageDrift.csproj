@@ -162,6 +162,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\Book Store Logo.png" />
+    <Content Include="Images\giphy.gif" />
     <Content Include="Images\Screenshot 2024-05-23 141008.png" />
     <Content Include="Images\Screenshot 2024-05-23 152904.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -203,6 +204,8 @@
     <Content Include="Views\Account\Signup.cshtml" />
     <Content Include="Views\Books\Edit.cshtml" />
     <Content Include="Views\Books\Admin.cshtml" />
+    <Content Include="Views\Books\DisplayVideos.cshtml" />
+    <Content Include="Views\Books\DisplayBhajan.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

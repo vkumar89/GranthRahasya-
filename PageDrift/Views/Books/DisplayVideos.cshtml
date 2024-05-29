@@ -1,0 +1,46 @@
+﻿@model IEnumerable<PageDrift.Models.Books>
+@{
+    ViewBag.Title = "DisplayVideos";
+}
+
+
+<main>
+
+    <body>
+        <div class="container mt-5">
+            <div class="row">
+
+                @foreach (var book in Model)
+                {
+                    if (book.File.Contains("mp4"))
+                    {
+                       
+                        <div class="col-md-4">
+                            <a href="http://localhost:50999/Books/DisplayBook/@book.BookId">
+                                <div class="card border-0">
+                                    @* img  ~/Uploads/@book.Img*@
+                                    <img src='~/Uploads/@book.Img' class="card-img-top glow" alt="Product Image" width="350px" height="350px">
+
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title">@book.Title</h5>
+                                        @Html.ActionLink("Read Book", "DisplayBook", new { id = book.BookId })
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    }
+
+
+
+                }
+
+            </div>
+
+        </div>
+
+        <!-- Bootstrap JS and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        @*// <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>*@
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</main>
