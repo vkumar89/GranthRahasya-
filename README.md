@@ -30,7 +30,7 @@ HTML, CSS, JavaScript
 Bootstrap
 SQL Server
 Contact Information
-For questions or issues, please contact email@example.com.
+For questions or issues, please contact kumarvipin897946@gmail.com.
 
 FAQs
 How can I add more holy books, songs, or videos?
