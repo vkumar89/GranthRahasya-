@@ -1,29 +1,20 @@
-[#GranthRahasya](https://granthrahasya.bsite.net/)
+[GranthRahasya](https://granthrahasya.bsite.net/)
 
 Description
+
 I developed a website for those who want to read holy books, listen to holy songs, and watch holy videos all in one spot without any distractions. This site is made using popular technologies like ASP.NET MVC, LINQ, HTML, CSS, JavaScript, Bootstrap, and SQL Server.
 
-Table of Contents
-Installation
-Usage
-Configuration
-Contributing
-License
-Credits
-Contact Information
-FAQs
-Installation
-Prerequisites
-ASP.NET MVC framework
-SQL Server
-Modern web browser
+
 Steps
+
 Clone the repository: git clone https://github.com/vkumar89/GranthRahasya-.git
 Navigate to the project directory: cd GranthRahasya-
 Restore the NuGet packages: dotnet restore
 Update the database connection string in appsettings.json.
 Run the project: dotnet run
+
 Usage
+
 Basic Usage
 To start using the website, simply open it in your web browser and navigate through the menu to access holy books, songs, and videos.
 
@@ -31,12 +22,6 @@ Examples
 
 Configuration
 Update the appsettings.json file with your SQL Server connection string and other configuration settings.
-
-Contributing
-Please read CONTRIBUTING.md for details on our code of conduct and the process for submitting pull requests.
-
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
 
 Credits
 ASP.NET MVC
