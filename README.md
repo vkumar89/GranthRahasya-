@@ -32,6 +32,9 @@ SQL Server
 Contact Information
 For questions or issues, please contact kumarvipin897946@gmail.com.
 
+
+[sql script] (https://drive.google.com/file/d/13fa4vcQESLxGkymI5gWhYAVMj7owFpHl/view?usp=drive_link)
+
 FAQs
 How can I add more holy books, songs, or videos?
 You can add more content by updating the database with the new entries.
